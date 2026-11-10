@@ -1,0 +1,355 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="An open project to rediscover and rebuild human knowledge.">
+  <title>Rebuilding Human Knowledge</title>
+  <style>
+    :root {
+      --bg: #f9f8f5;
+      --ink: #252723;
+      --muted: #777b73;
+      --line: #deded8;
+      --accent: #465e56;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.75;
+    }
+
+    a { color: inherit; }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 0 32px;
+    }
+
+    header {
+      border-bottom: 1px solid var(--line);
+    }
+
+    nav {
+      min-height: 84px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      font-size: 19px;
+      font-weight: bold;
+      text-decoration: none;
+      letter-spacing: -.5px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--muted);
+    }
+
+    .nav-links a:hover { color: var(--ink); }
+
+    .hero {
+      padding: 135px 0 125px;
+      max-width: 800px;
+    }
+
+    .eyebrow {
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      color: var(--accent);
+    }
+
+    h1 {
+      font-size: clamp(46px, 7vw, 82px);
+      font-weight: normal;
+      line-height: 1.12;
+      letter-spacing: -2px;
+      margin: 28px 0;
+    }
+
+    .hero p {
+      max-width: 620px;
+      font-size: 21px;
+      color: #5e625b;
+      line-height: 1.7;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 12px 24px;
+      border: 1px solid var(--ink);
+      text-decoration: none;
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+      transition: .2s;
+    }
+
+    .button:hover {
+      background: var(--ink);
+      color: white;
+    }
+
+    section {
+      padding: 80px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    h2 {
+      font-size: 38px;
+      font-weight: normal;
+      letter-spacing: -1px;
+      margin: 0 0 30px;
+    }
+
+    .intro {
+      max-width: 730px;
+      font-size: 19px;
+    }
+
+    .disciplines {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .discipline {
+      border-top: 1px solid var(--line);
+      padding-top: 25px;
+    }
+
+    .discipline span {
+      color: var(--muted);
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+    }
+
+    .discipline h3 {
+      font-size: 26px;
+      font-weight: normal;
+      margin: 15px 0;
+    }
+
+    .discipline p {
+      font-size: 16px;
+      color: var(--muted);
+    }
+
+    .manifesto {
+      max-width: 740px;
+    }
+
+    .manifesto p {
+      font-size: 19px;
+      margin-bottom: 24px;
+    }
+
+    blockquote {
+      margin: 45px 0;
+      padding-left: 25px;
+      border-left: 2px solid var(--accent);
+      font-size: 25px;
+      font-style: italic;
+      line-height: 1.5;
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 35px 0;
+      color: var(--muted);
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    @media (max-width: 700px) {
+      .container { padding: 0 22px; }
+      nav { min-height: 72px; }
+      .nav-links { gap: 14px; }
+      .hero { padding: 95px 0; }
+      .hero p { font-size: 18px; }
+      section { padding: 60px 0; }
+      .disciplines { grid-template-columns: 1fr; }
+      .footer-content { flex-direction: column; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="container">
+      <a class="brand" href="#">Kairos</a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#explore">Explore</a>
+        <a href="#manifesto">Manifesto</a>
+        <a href="https://github.com/kairos-phi/kairos-phi.github.io"
+           target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="hero">
+        <div class="eyebrow">An open intellectual experiment</div>
+
+        <h1>Rebuilding<br>Human Knowledge.</h1>
+
+        <p>
+          What if we could rediscover everything?
+          Not merely learn what humanity already knows,
+          but retrace the questions, struggles, and
+          discoveries that made knowledge possible.
+        </p>
+
+        <a class="button" href="#about">Begin exploring &rarr;</a>
+      </div>
+    </div>
+
+    <section id="about">
+      <div class="container">
+        <div class="eyebrow">01 / The Idea</div>
+        <h2>Knowledge is a journey.</h2>
+
+        <div class="intro">
+          <p>
+            Most textbooks begin with answers.
+            We want to begin with questions.
+          </p>
+
+          <p>
+            Why did humans invent numbers?
+            How did we come to understand motion?
+            What does it mean to know something?
+          </p>
+
+          <p>
+            We believe genuine understanding emerges
+            when we reconstruct the reasoning behind
+            humanity's greatest discoveries.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="explore">
+      <div class="container">
+        <div class="eyebrow">02 / Fields of Exploration</div>
+        <h2>Three beginnings. One pursuit.</h2>
+
+        <div class="disciplines">
+          <div class="discipline">
+            <span>01</span>
+            <h3>Mathematics</h3>
+            <p>
+              From counting and geometry to infinity,
+              proof, and abstraction.
+            </p>
+            <p>Chapters coming soon.</p>
+          </div>
+
+          <div class="discipline">
+            <span>02</span>
+            <h3>Physics</h3>
+            <p>
+              From the mystery of motion to the
+              fundamental structure of reality.
+            </p>
+            <p>Chapters coming soon.</p>
+          </div>
+
+          <div class="discipline">
+            <span>03</span>
+            <h3>Philosophy</h3>
+            <p>
+              From our earliest questions to the
+              foundations of knowledge and existence.
+            </p>
+            <p>Chapters coming soon.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="manifesto">
+      <div class="container">
+        <div class="manifesto">
+          <div class="eyebrow">03 / Our Manifesto</div>
+          <h2>To rediscover is to create.</h2>
+
+          <p>
+            Human knowledge was not born as a finished
+            collection of definitions, formulas, and theories.
+          </p>
+
+          <p>
+            It emerged through curiosity, disagreement,
+            imagination, failure, and extraordinary
+            acts of intellectual courage.
+          </p>
+
+          <p>
+            We want to make that journey accessible
+            to everyone.
+          </p>
+
+          <blockquote>
+            We are not here merely to teach what
+            humanity already knows. We are here
+            to rediscover it together.
+          </blockquote>
+
+          <p>
+            This project is free, independent,
+            and committed to open knowledge.
+            Its chapters will grow through research,
+            criticism, and thoughtful contributions.
+          </p>
+
+          <a class="button"
+             href="https://github.com/kairos-phi/kairos-phi.github.io"
+             target="_blank" rel="noopener noreferrer">
+            View the project on GitHub &rarr;
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-content">
+      <span>&copy; 2026 Kairos. Built for curiosity.</span>
+      <span>Free knowledge. Open to everyone.</span>
+    </div>
+  </footer>
+</body>
+</html>
